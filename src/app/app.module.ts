@@ -7,13 +7,17 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
+import { PostCadastrarComponent } from './modules/post/components/post-cadastrar/post-cadastrar.component';
+import { PostsComponent } from './modules/home/components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostCadastrarComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
