@@ -1,1 +1,22 @@
-<p>post-cadastrar works!</p>
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+
+        <form>
+          <mat-form-field style="display: flex" appearance="outline">
+            <input [(ngModel)]="post.titulo" name="titulo" matInput placeholder="Título do post"/>
+          </mat-form-field>
+
+
+          <div class="d-flex justify-content-center mb-4"><button class="btn btn-primary text-uppercase" (click)="cadastrarPost()">SALVAR</button></div>
+
+        </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

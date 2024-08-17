@@ -9,6 +9,10 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { PostCadastrarComponent } from './modules/post/components/post-cadastrar/post-cadastrar.component';
 import { PostsComponent } from './modules/home/components/posts/posts.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule} from "@angular/forms";
+import {MatCardModule, MatCardTitle} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -21,7 +25,12 @@ import { PostsComponent } from './modules/home/components/posts/posts.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatCardTitle
   ],
   providers: [
     provideClientHydration(),
