@@ -2,13 +2,16 @@
   <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
 
-        <form>
+        <form [formGroup]="formGroupCadastroPost">
           <mat-form-field style="display: flex" appearance="outline">
-            <input [(ngModel)]="post.titulo" name="titulo" matInput placeholder="Título do post"/>
+            <input formControlName="titulo" name="titulo" matInput placeholder="Título do post"/>
           </mat-form-field>
 
+          <angular-editor [placeholder]="'Enter text here...'" formControlName="texto"  [config]="editorConfig" ></angular-editor>
 
-          <div class="d-flex justify-content-center mb-4"><button class="btn btn-primary text-uppercase" (click)="cadastrarPost()">SALVAR</button></div>
+          <div class="row">
+            <div class="d-flex justify-content-center mb-4"><button class="btn btn-primary text-uppercase" (click)="cadastrarPost()">salvar</button></div>
+          </div>
 
         </form>
 

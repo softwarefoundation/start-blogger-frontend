@@ -1,7 +1,7 @@
 export interface PostModel {
 
   postId?: number
-  titulo: string,
-  texto: string
+  titulo?: string | null,
+  texto?:  string | null,
 
 }

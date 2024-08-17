@@ -10,11 +10,12 @@ import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { PostCadastrarComponent } from './modules/post/components/post-cadastrar/post-cadastrar.component';
 import { PostsComponent } from './modules/home/components/posts/posts.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule, MatCardTitle} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {PostService} from "./shared/services/post.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {AngularEditorModule} from "@kolkov/angular-editor";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatInputModule,
     MatCardModule,
     MatCardTitle,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration(),
