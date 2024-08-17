@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class PostServiceService {
+export class PostService {
 
   baseUrl = "http://localhost:8080/api/v1/post";
 
@@ -13,7 +13,6 @@ export class PostServiceService {
 
 
   postPost(post: PostModel){
-    console.log('Salvando post: ', post);
     return this.http.post<PostModel>(`${this.baseUrl}`, post);
   }
 

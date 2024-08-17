@@ -13,6 +13,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatCardModule, MatCardTitle} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
+import {PostService} from "./shared/services/post.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,11 +32,13 @@ import {MatInputModule} from "@angular/material/input";
     FormsModule,
     MatInputModule,
     MatCardModule,
-    MatCardTitle
+    MatCardTitle,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    PostService
   ],
   bootstrap: [AppComponent]
 })

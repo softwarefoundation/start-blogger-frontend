@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PostModel} from "../../../../shared/models/post.model";
+import {PostService} from "../../../../shared/services/post.service";
 
 @Component({
   selector: 'app-post-cadastrar',
@@ -8,14 +9,22 @@ import {PostModel} from "../../../../shared/models/post.model";
 })
 export class PostCadastrarComponent implements OnInit {
 
-  post: PostModel = {texto: "", titulo: ""}
+  post: PostModel = {
+    texto: "",
+    titulo: ""
+  }
+
+
+  constructor(private postService: PostService) {
+  }
 
   ngOnInit(): void {
   }
 
 
   cadastrarPost(){
-    console.log('Cadastrar POST');
+    this.postService.postPost(this.post).subscribe(value => {
+    });
   }
 
 }
